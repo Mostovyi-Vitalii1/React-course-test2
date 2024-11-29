@@ -1,6 +1,7 @@
 import React from "react";
 import useUsers from "./hooks/useUsers";
 import UserFetcher from "./components/UserFetcher";
+import "./styles.css";
 
 const App = () => {
   const {

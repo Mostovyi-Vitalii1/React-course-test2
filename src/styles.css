@@ -1,21 +1,51 @@
-.App {
-  font-family: Arial, sans-serif;
-  padding: 20px;
+/* app.css */
+.user-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-evenly; /* Вирівнювання карток по ширині */
 }
 
 .user-card {
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  justify-content: center; /* Вирівнювання елементів в картці */
+  background-color: white;
+  padding: 15px;
+  width: 250px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+  flex-shrink: 0;
+  flex-grow: 0; /* Забезпечує фіксовану ширину карток */
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
 }
 
 .user-card img {
   border-radius: 50%;
-  margin-right: 10px;
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin-right: 15px;
 }
 
-.filter-input {
-  margin-bottom: 20px;
-  padding: 5px;
-  width: 100%;
+.user-card p {
+  font-size: 16px;
+  font-weight: 500;
+  margin-right: 15px;
+}
+
+@media (max-width: 600px) {
+  .user-card {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-card img {
+    width: 100px;
+    height: 100px;
+  }
 }

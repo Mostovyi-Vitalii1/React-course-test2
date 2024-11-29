@@ -1,8 +1,8 @@
 import React from "react";
 
-const UserList = React.memo(({ users, onDelete }) => {
+const UserList = ({ users, onDelete }) => {
   return (
-    <div>
+    <div className="user-card-container">
       {users.length ? (
         users.map((user) => (
           <div key={user.id} className="user-card">
@@ -18,6 +18,6 @@ const UserList = React.memo(({ users, onDelete }) => {
       )}
     </div>
   );
-});
+};
 
 export default UserList;
